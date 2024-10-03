@@ -1,6 +1,6 @@
 vim.g.mapleader = " "
 -- Opens :Ex the beautiful netwr
-vim.keymap.set("n", "<leader>pv", vim.cmd.NvimTreeOpen)
+vim.keymap.set("n", "<leader>pv", vim.cmd.Ex)
 
 -- Moves the selection
 vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")
@@ -36,3 +36,17 @@ vim.keymap.set("n", "Q", "<nop>")
 
 -- Replace all ocurrences of the work under the cursor
 vim.keymap.set("n", "<leader>s", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]])
+
+-- Map tabs
+-- Key mappings for better tab management
+vim.api.nvim_set_keymap('n', '<leader>tn', ':tabnew<CR>', { noremap = true, silent = true })    -- Open a new tab
+vim.api.nvim_set_keymap('n', '<leader>to', ':tabonly<CR>', { noremap = true, silent = true })   -- Close all other tabs
+vim.api.nvim_set_keymap('n', '<leader>tc', ':tabclose<CR>', { noremap = true, silent = true })  -- Close current tab
+vim.api.nvim_set_keymap('n', '<leader>tm', ':tabmove ', { noremap = true, silent = false })     -- Move current tab (prompts for tab position)
+vim.api.nvim_set_keymap('n', '<leader>tl', ':tabnext<CR>', { noremap = true, silent = true })   -- Go to next tab
+vim.api.nvim_set_keymap('n', '<leader>th', ':tabprevious<CR>', { noremap = true, silent = true })-- Go to previous tab
+vim.api.nvim_set_keymap('n', '<leader>t1', '1gt', { noremap = true, silent = true })            -- Go to tab 1
+vim.api.nvim_set_keymap('n', '<leader>t2', '2gt', { noremap = true, silent = true })            -- Go to tab 2
+vim.api.nvim_set_keymap('n', '<leader>t3', '3gt', { noremap = true, silent = true })            -- Go to tab 3
+vim.api.nvim_set_keymap('n', '<leader>t4', '4gt', { noremap = true, silent = true })            -- Go to tab 4
+
