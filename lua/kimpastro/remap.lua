@@ -50,3 +50,13 @@ vim.api.nvim_set_keymap('n', '<leader>t2', '2gt', { noremap = true, silent = tru
 vim.api.nvim_set_keymap('n', '<leader>t3', '3gt', { noremap = true, silent = true })            -- Go to tab 3
 vim.api.nvim_set_keymap('n', '<leader>t4', '4gt', { noremap = true, silent = true })            -- Go to tab 4
 
+-- Copy the current file path
+vim.keymap.set("n", "<leader>cp", function()
+  vim.fn.setreg('+Y', vim.fn.expand('%'))
+end, { noremap = true, silent = true })
+
+-- Copy the current file name
+vim.keymap.set("n", "<leader>cf", function()
+  vim.fn.setreg('+Y', vim.fn.expand('%:t'))
+end, { noremap = true, silent = true })
+
