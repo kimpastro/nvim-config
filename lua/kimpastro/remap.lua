@@ -50,13 +50,14 @@ vim.api.nvim_set_keymap('n', '<leader>t2', '2gt', { noremap = true, silent = tru
 vim.api.nvim_set_keymap('n', '<leader>t3', '3gt', { noremap = true, silent = true })            -- Go to tab 3
 vim.api.nvim_set_keymap('n', '<leader>t4', '4gt', { noremap = true, silent = true })            -- Go to tab 4
 
--- Copy the current file path
+-- Copy the current file name
 vim.keymap.set("n", "<leader>cp", function()
-  vim.fn.setreg('+Y', vim.fn.expand('%'))
+  vim.fn.setreg('+', vim.fn.expand('%'))
 end, { noremap = true, silent = true })
 
--- Copy the current file name
-vim.keymap.set("n", "<leader>cf", function()
-  vim.fn.setreg('+Y', vim.fn.expand('%:t'))
-end, { noremap = true, silent = true })
+-- Resize splits with arrow keys
+vim.api.nvim_set_keymap("n", "<C-S-Down>", ":resize -2<CR>", { noremap = true, silent = true })
+vim.api.nvim_set_keymap("n", "<C-S-Up>", ":resize +2<CR>", { noremap = true, silent = true })
+vim.api.nvim_set_keymap("n", "<C-S-Left>", ":vertical resize +2<CR>", { noremap = true, silent = true })
+vim.api.nvim_set_keymap("n", "<C-S-Right>", ":vertical resize -2<CR>", { noremap = true, silent = true })
 
