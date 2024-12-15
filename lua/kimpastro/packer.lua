@@ -11,6 +11,8 @@ return require('packer').startup(function(use)
 	  requires = { {'nvim-lua/plenary.nvim'} }
   }
 
+  -- Color schemes
+  use('ribru17/bamboo.nvim')
   use('navarasu/onedark.nvim')
   use('morhetz/gruvbox')
 
@@ -27,4 +29,11 @@ return require('packer').startup(function(use)
   use({'hrsh7th/cmp-nvim-lsp'})
   use({'mg979/vim-visual-multi'})
   use('airblade/vim-gitgutter')
+  use {
+    'lewis6991/gitsigns.nvim',
+    requires = { 'nvim-lua/plenary.nvim' }, -- Dependency
+    config = function ()
+      require('gitsigns').setup()
+    end
+  }
 end)

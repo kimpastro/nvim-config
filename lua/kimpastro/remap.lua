@@ -56,8 +56,25 @@ vim.keymap.set("n", "<leader>cp", function()
 end, { noremap = true, silent = true })
 
 -- Resize splits with arrow keys
-vim.api.nvim_set_keymap("n", "<C-S-Down>", ":resize -2<CR>", { noremap = true, silent = true })
-vim.api.nvim_set_keymap("n", "<C-S-Up>", ":resize +2<CR>", { noremap = true, silent = true })
-vim.api.nvim_set_keymap("n", "<C-S-Left>", ":vertical resize +2<CR>", { noremap = true, silent = true })
-vim.api.nvim_set_keymap("n", "<C-S-Right>", ":vertical resize -2<CR>", { noremap = true, silent = true })
+vim.api.nvim_set_keymap("n", "<C-S-Up>", ":resize -2<CR>", { noremap = true, silent = true })
+vim.api.nvim_set_keymap("n", "<C-S-Down>", ":resize +2<CR>", { noremap = true, silent = true })
+vim.api.nvim_set_keymap("n", "<C-S-Right>", ":vertical resize +2<CR>", { noremap = true, silent = true })
+vim.api.nvim_set_keymap("n", "<C-S-Left>", ":vertical resize -2<CR>", { noremap = true, silent = true })
+
+-- Fugitive (Git)
+vim.keymap.set('n', '<leader>gs', ':G<CR>', { desc = "Git status" })
+vim.keymap.set('n', '<leader>gc', ':Git commit<CR>', { desc = "Git commit" })
+vim.keymap.set('n', '<leader>gp', ':Git push<CR>', { desc = "Git push" })
+vim.keymap.set('n', '<leader>gl', ':Git pull<CR>', { desc = "Git pull" })
+vim.keymap.set('n', '<leader>gd', ':Gdiffsplit<CR>', { desc = "Git diff" })
+vim.keymap.set('n', '<leader>gb', ':Git blame<CR>', { desc = "Git blame" })
+
+-- gitsigns
+vim.keymap.set('n', '<leader>hs', ':Gitsigns stage_hunk<CR>', { desc = "Stage hunk" })
+vim.keymap.set('n', '<leader>hu', ':Gitsigns undo_stage_hunk<CR>', { desc = "Undo stage hunk" })
+vim.keymap.set('n', '<leader>hr', ':Gitsigns reset_hunk<CR>', { desc = "Reset hunk" })
+vim.keymap.set('n', '<leader>hp', ':Gitsigns preview_hunk<CR>', { desc = "Preview hunk" })
+vim.keymap.set('n', '<leader>hb', ':Gitsigns blame_line<CR>', { desc = "Blame line" })
+vim.keymap.set('n', ']c', ':Gitsigns next_hunk<CR>', { desc = "Next hunk" })
+vim.keymap.set('n', '[c', ':Gitsigns prev_hunk<CR>', { desc = "Previous hunk" })
 

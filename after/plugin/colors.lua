@@ -3,4 +3,10 @@
 -- }
 -- require('onedark').load()
 
-vim.cmd('colorscheme gruvbox')
+-- vim.cmd('colorscheme gruvbox')
+
+require('bamboo').setup({
+  style = 'vulgaris'
+})
+
+vim.cmd('colorscheme bamboo')
