@@ -33,4 +33,5 @@ vim.opt.updatetime = 50
 vim.g.mapleader = " "
 
 
-vim.o.background = "light"
+-- Needed when using light color themes
+-- vim.o.background = "light"

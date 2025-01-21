@@ -6,7 +6,7 @@
 -- vim.cmd('colorscheme gruvbox')
 
 require('bamboo').setup({
-  style = 'light'
+--  style = 'light'
 })
 
 vim.cmd('colorscheme bamboo')
