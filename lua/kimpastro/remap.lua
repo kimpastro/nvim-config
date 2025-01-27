@@ -80,3 +80,10 @@ vim.keymap.set('n', '[c', ':Gitsigns prev_hunk<CR>', { desc = "Previous hunk" })
 
 -- Open terminal in a new split
 vim.api.nvim_set_keymap('n', '<leader>t', ':vsplit | wincmd l | terminal<CR>', { noremap = true, silent = true })
+
+-- Add an empty line above
+vim.keymap.set("n", "<leader>O", "O<Esc>", { noremap = true, silent = true })
+
+-- Add an empty line below
+vim.keymap.set("n", "<leader>o", "o<Esc>", { noremap = true, silent = true })
+

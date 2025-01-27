@@ -22,16 +22,18 @@ vim.opt.incsearch = true
 
 vim.opt.termguicolors = true
 
-vim.opt.scrolloff = 8
+vim.opt.scrolloff = 14
 vim.opt.signcolumn = "yes"
 vim.opt.isfname:append("@-@")
 
 vim.opt.updatetime = 50
 
--- vim.opt.colorcolumn = "120"
+-- Vertical line
+vim.opt.colorcolumn = "80"
 
 vim.g.mapleader = " "
 
-
--- Needed when using light color themes
--- vim.o.background = "light"
+-- Folding blocks
+vim.opt.foldmethod = 'expr'
+vim.opt.foldexpr = 'nvim_treesitter#foldexpr()'
+vim.opt.foldlevel = 99

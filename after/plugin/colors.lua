@@ -5,8 +5,11 @@
 
 -- vim.cmd('colorscheme gruvbox')
 
-require('bamboo').setup({
+-- require('bamboo').setup({
 --  style = 'light'
-})
+-- })
 
-vim.cmd('colorscheme bamboo')
+-- Needed when using light color themes
+-- vim.o.background = "light"
+
+vim.cmd('colorscheme onedark')

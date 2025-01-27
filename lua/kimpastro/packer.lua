@@ -15,6 +15,7 @@ return require('packer').startup(function(use)
   use('ribru17/bamboo.nvim')
   use('navarasu/onedark.nvim')
   use('morhetz/gruvbox')
+  use('rafi/awesome-vim-colorschemes') -- Collection
 
   use('nvim-treesitter/nvim-treesitter', {run = ':TSUpdate'})
   use('nvim-treesitter/nvim-treesitter-context')
