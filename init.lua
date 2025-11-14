@@ -10,6 +10,7 @@ vim.o.relativenumber = true
 vim.g.mapleader = " "
 
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
+
 if not (vim.uv or vim.loop).fs_stat(lazypath) then
 	vim.fn.system({
 		"git",
@@ -20,9 +21,8 @@ if not (vim.uv or vim.loop).fs_stat(lazypath) then
 		lazypath,
 	})
 end
+
 vim.opt.rtp:prepend(lazypath)
 
-local opts = {}
-local plugins = {}
+require("lazy").setup("plugins")
 
-require("lazy").setup(plugins, opts)
